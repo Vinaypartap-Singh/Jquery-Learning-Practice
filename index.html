@@ -96,6 +96,14 @@
         text-decoration: underline;
         color: red;
       }
+
+      /* Toggle Class Example Css */
+
+      .toggleRed {
+        background-color: tomato !important;
+        cursor: pointer;
+        transition: 0.3s ease-in-out all;
+      }
     </style>
     <title>Jquery Practice</title>
   </head>
@@ -194,6 +202,13 @@
         <h1>Last Name <span id="lname"></span></h1>
         <h1>Email <span id="email"></span></h1>
       </div>
+
+      <div id="toggleClass">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        soluta porro hic architecto sint eligendi, accusantium ducimus eveniet
+        doloribus earum quo illo, illum mollitia modi distinctio ratione
+        laudantium maiores? Odit laboriosam odio saepe incidunt.
+      </div>
     </div>
   </body>
 
@@ -246,6 +261,17 @@
       $("#UEmail").change(function () {
         var a = $(this).val();
         $("#email").html(a);
+      });
+
+      $("#toggleClass").css("padding", "20px");
+      $("#toggleClass").css("margin", "20px");
+      $("#toggleClass").css("line-height", "40px");
+      $("#toggleClass").css("background-color", "lightgray");
+      $("#toggleClass").css("border-radius", "10px");
+      $("#toggleClass").css("transition", "0.3s ease-in-out all");
+
+      $("#toggleClass").hover(function () {
+        $(this).toggleClass("toggleRed");
       });
     });
   </script>
