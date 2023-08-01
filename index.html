@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: Source Code Pro;
+      }
+      .acc-section {
+        max-width: 300px;
+      }
+
+      .acc-title {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        cursor: pointer;
+      }
+
+      .acc-content {
+        display: none;
+      }
+
+      .custmIcon {
+        rotate: 180deg;
+      }
+
+      .up {
+        rotate: 0deg !important;
+      }
+    </style>
+    <title>Jquery Practice</title>
+  </head>
+  <body>
+    <div>
+      <h1>Jquery Accordian</h1>
+
+      <div class="acc-wrapper">
+        <div class="acc-section">
+          <div class="acc-title">
+            <h4>Why Choose Us ?</h4>
+            <div class="icon">
+              <i class="fa-solid fa-chevron-up custmIcon"></i>
+            </div>
+          </div>
+          <div class="acc-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+            culpa, sequi labore nobis aliquam id error illo at nisi saepe,
+            magnam eligendi perspiciatis corporis. Quibusdam laudantium, libero
+            aliquid molestiae distinctio velit consectetur tempore voluptas?
+          </div>
+        </div>
+      </div>
+
+      <div class="slick-slider">
+        <h1>Slick Slider Resposive Slide</h1>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      $(".acc-title").click(function () {
+        $(".acc-content").fadeToggle();
+        $(".custmIcon").toggleClass("up");
+      });
+    });
+  </script>
+</html>
