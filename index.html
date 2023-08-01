@@ -182,6 +182,18 @@
           </div>
         </div>
       </div>
+
+      <div class="form">
+        <form action="" id="jform">
+          <input placeholder="First Name" type="text" id="fName" />
+          <input placeholder="Last Name" type="text" id="lName" />
+          <input placeholder="Email" type="email" id="UEmail" />
+        </form>
+
+        <h1>First Name <span id="fname"></span></h1>
+        <h1>Last Name <span id="lname"></span></h1>
+        <h1>Email <span id="email"></span></h1>
+      </div>
     </div>
   </body>
 
@@ -219,6 +231,21 @@
             },
           },
         ],
+      });
+
+      $("#fName").change(function () {
+        var a = $(this).val();
+        $("#fname").html(a);
+      });
+
+      $("#lName").change(function () {
+        var a = $(this).val();
+        $("#lname").html(a);
+      });
+
+      $("#UEmail").change(function () {
+        var a = $(this).val();
+        $("#email").html(a);
       });
     });
   </script>
